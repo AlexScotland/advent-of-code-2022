@@ -73,5 +73,5 @@ def add_all_priorities(priority_list):
             counter += sims[key]
     return counter
 if __name__ == "__main__":
-    # print(solution_1())
+    print(solution_1())
     print(solution_2())

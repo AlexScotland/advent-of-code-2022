@@ -28,7 +28,8 @@ class Sequence_Range_All(Sequence_Range):
         return any(item in self.range_1.range for item in self.range_2.range) or any(item in self.range_2.range for item in self.range_1.range)
 
 
-def solution1(text):
+def solution1():
+    text = TextInput("./inputs/day_4.txt")
     counter = 0
     for ranges in text.values:
         ranges = ranges.strip()
@@ -42,7 +43,8 @@ def solution1(text):
             counter += 1
     return counter
 
-def solution2(text):
+def solution2():
+    text = TextInput("./inputs/day_4.txt")
     counter = 0
     for ranges in text.values:
         ranges = ranges.strip()
@@ -58,6 +60,5 @@ def solution2(text):
 
 
 if __name__ == "__main__":
-    text = TextInput("./inputs/day_4.txt")
-    print(solution1(text))
-    print(solution2(text))
+    print(solution1())
+    print(solution2())

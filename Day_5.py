@@ -28,7 +28,8 @@ def generate_all_instructions(text):
     return all_instructions
         
 
-def solution_1(text):
+def solution_1():
+    text = TextInput("./inputs/day_5.txt")
     stack = StackSystemBuilder.create_stack_game(text)
     extracted_text = extract_game_from_text(text, False)
     for i in extracted_text:
@@ -41,7 +42,8 @@ def solution_1(text):
             stack.move_to_new_column(source_column, instruction.from_val -1, destination_column, instruction.to -1)
     return stack
 
-def solution_2(text):
+def solution_2():
+    text = TextInput("./inputs/day_5.txt")
     stack = StackSystemBuilder.create_stack_game(text)
     extracted_text = extract_game_from_text(text, False)
     for i in extracted_text:
@@ -169,5 +171,5 @@ class StackSystemBuilder():
         return gamer
 
 if __name__ == "__main__":
-    page = TextInput("./inputs/day_5.txt")
-    print(solution_2(page))
+    print(solution_1())
+    # print(solution_2())

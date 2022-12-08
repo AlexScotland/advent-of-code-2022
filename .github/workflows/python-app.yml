@@ -24,7 +24,7 @@ jobs:
       with:
         python-version: "3.10"
     - name: Install Dependencies
-      run: pip install pytest
+      run: pip install pytest pandas numpy
     - name: Test with pytest
       run: |
         pytest
